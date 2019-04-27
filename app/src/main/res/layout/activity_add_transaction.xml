@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addTransaction"
+    android:background="#FFC107"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_round"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:hint="Date"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/roll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_round"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:hint="Roll"
+            android:inputType="number"
+            />
+        <EditText
+            android:id="@+id/ref"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_round"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:hint="Reference no"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:id="@+id/purpose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_round"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:hint="Purpose"
+            android:inputType="textNoSuggestions"
+            />
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_round"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:hint="Amount"
+            android:inputType="number"
+            />
+        <EditText
+            android:id="@+id/authorizedBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/semi_round"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:hint="Authorized by"
+            />
+        <Button
+            android:id="@+id/add"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_white"
+            android:backgroundTint="#FF5722"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:text="Add"
+            />
+    </LinearLayout>
+
+</ScrollView>

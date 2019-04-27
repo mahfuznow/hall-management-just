@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4CAF50"
+    android:orientation="vertical"
+    android:weightSum="11"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="6"
+        app:layout_constraintBottom_toTopOf="@+id/signUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/justlogo"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="2"
+            android:fontFamily="@font/bold"
+            android:textColor="#fff"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/regular"
+            android:text="শহীদ মসিয়ূর রহমান হল"
+            android:gravity="center"
+            android:textColor="#f9f9f9"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/outereround"
+            android:backgroundTint="#45050505"
+            android:fontFamily="@font/medium"
+            android:hint="Email"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#d9d8d8"
+            android:textSize="16sp"
+            android:inputType="textNoSuggestions"
+            />
+        <EditText
+            android:id="@+id/pass"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/outereround"
+            android:backgroundTint="#45050505"
+            android:fontFamily="@font/medium"
+            android:hint="Password"
+            android:padding="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#d9d8d8"
+            android:textSize="16sp"
+            android:inputType="textPassword"
+            />
+
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_white"
+            android:fontFamily="@font/medium"
+            android:text="Login"
+            android:textColor="#000"
+            android:textColorHint="#fff"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/signUp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="#18682f"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="Don't have a account?"
+        android:textAllCaps="false"
+        android:textColor="#ffff"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
