@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +31,15 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth mauth;
 
 
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mauth.getCurrentUser();
+        if (currentUser!=null){
+            Intent intent = new Intent(MainActivity.this, HomeNew.class);
+            startActivity(intent);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 dialog.dismiss();
-                                Intent intent = new Intent(MainActivity.this, Home.class);
+                                Intent intent = new Intent(MainActivity.this, HomeNew.class);
                                 startActivity(intent);
 
                             } else if (!isNetworkAvailable()) {

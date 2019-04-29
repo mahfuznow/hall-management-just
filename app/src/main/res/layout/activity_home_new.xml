@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4CAF50"
+    android:orientation="vertical"
+    tools:context=".HomeNew"
+    android:focusableInTouchMode="true"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/smr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="শহীদ মসিয়ূর রহমান হল"
+        android:textColor="#f9f9f9"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/semi_round2"
+                    android:drawableTop="@drawable/search"
+                    android:paddingTop="25dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="Search Student"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/profile"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/semi_round2"
+                    android:drawableTop="@drawable/profileicon"
+                    android:paddingTop="25dp"
+                    android:text="Profile"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/addStudent"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="5dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_weight="1"
+                    android:background="@drawable/semi_round2"
+                    android:drawableTop="@drawable/add_person"
+                    android:paddingTop="40dp"
+                    android:text="Add Student"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/addTransaction"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="5dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_weight="1"
+                    android:background="@drawable/semi_round2"
+                    android:drawableTop="@drawable/cash"
+                    android:paddingTop="40dp"
+                    android:text="Add Transaction"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/pendingAddStudent"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="5dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_weight="1"
+                    android:background="@drawable/semi_round2"
+                    android:drawableTop="@drawable/add_person"
+                    android:paddingTop="40dp"
+                    android:text="Pending Add Student"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/pendingTransaction"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_margin="5dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_weight="1"
+                    android:background="@drawable/semi_round2"
+                    android:drawableTop="@drawable/cash"
+                    android:paddingTop="40dp"
+                    android:text="Pending Transaction"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="#18682f"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:text="Don't have a account?"
+        android:textAllCaps="false"
+        android:textColor="#ffff"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</LinearLayout>

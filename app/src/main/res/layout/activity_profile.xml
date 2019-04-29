@@ -110,14 +110,14 @@
 
 
             <Button
-                android:id="@+id/close"
+                android:id="@+id/logOut"
                 android:layout_marginTop="20dp"
                 android:padding="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Close"
+                android:text="Log Out"
                 android:background="@drawable/round_white"
-                android:backgroundTint="#615C5B"
+                android:backgroundTint="#FF5722"
                 android:layout_gravity="center"
                 />
         </LinearLayout>

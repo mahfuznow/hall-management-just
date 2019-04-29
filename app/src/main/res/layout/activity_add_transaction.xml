@@ -46,16 +46,55 @@
             android:inputType="number"
             />
 
-        <EditText
+        <TextView
             android:id="@+id/purpose"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/semi_round"
-            android:padding="15dp"
-            android:layout_margin="10dp"
-            android:hint="Purpose"
+            android:layout_marginLeft="10dp"
+            android:text="Select Purpose"
+            android:textSize="16sp"
+            android:textColor="#fff"
             android:inputType="textNoSuggestions"
             />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <CheckBox
+        android:layout_marginLeft="10dp"
+        android:id="@+id/admit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Admit" />
+    <CheckBox
+        android:layout_marginLeft="10dp"
+        android:id="@+id/id_card"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="ID card" />
+    <CheckBox
+        android:layout_marginLeft="10dp"
+        android:id="@+id/seat"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Seat" />
+    <CheckBox
+        android:layout_marginLeft="10dp"
+        android:id="@+id/meal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Meal" />
+    <CheckBox
+        android:layout_marginLeft="10dp"
+        android:id="@+id/fine"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Fine" />
+</LinearLayout>
+
+
+
         <EditText
             android:id="@+id/amount"
             android:layout_width="match_parent"
@@ -66,15 +105,19 @@
             android:hint="Amount"
             android:inputType="number"
             />
-        <EditText
-            android:id="@+id/authorizedBy"
+
+        <Spinner
+            android:id="@+id/hall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/semi_round"
-            android:padding="15dp"
+            android:entries="@array/hall"
             android:layout_margin="10dp"
-            android:hint="Authorized by"
-            />
+            android:padding="5dp"
+            android:background="@drawable/semi_round"
+            >
+
+        </Spinner>
+
         <Button
             android:id="@+id/add"
             android:layout_width="200dp"
@@ -86,6 +129,8 @@
             android:layout_gravity="center"
             android:text="Add"
             />
+
+
     </LinearLayout>
 
 </ScrollView>

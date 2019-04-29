@@ -1,6 +1,7 @@
 package just.cse.mahfuz.smrjust;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,7 +28,7 @@ public class Profile extends AppCompatActivity {
     String mycategory,uid;
     FirebaseAuth auth;
 
-    Button close;
+    Button logOut;
 
     ProgressDialog progressDialog;
 
@@ -44,7 +45,7 @@ public class Profile extends AppCompatActivity {
         email=findViewById(R.id.email);
         enrollment=findViewById(R.id.enrollment);
 
-        close=findViewById(R.id.close);
+        logOut =findViewById(R.id.logOut);
 
 
         firebaseFirestore=FirebaseFirestore.getInstance();
@@ -88,10 +89,15 @@ public class Profile extends AppCompatActivity {
             }
         });
 
-        close.setOnClickListener(new View.OnClickListener() {
+        logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressDialog.setMessage("Logging out....");
+                progressDialog.show();
+                auth.signOut();
                 finish();
+                Intent intent = new Intent(Profile.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

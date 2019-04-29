@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SMR JUST</string>
+
+    <string-array name="hall">
+        <item>--Select Hall--</item>
+        <item>SMR</item>
+        <item>SH</item>
+        <item>MM</item>
+        <item>TB</item>
+    </string-array>
 </resources>

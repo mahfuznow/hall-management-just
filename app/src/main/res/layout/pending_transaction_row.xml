@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/semi_round"
+    android:layout_gravity="center_horizontal"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        >
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Date"
+            android:textSize="10sp"
+            android:background="@drawable/table_border"
+            />
+        <TextView
+            android:visibility="gone"
+            android:padding="5dp"
+            android:id="@+id/roll"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Roll"
+            android:textSize="10sp"
+            android:background="@drawable/table_border"
+            />
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/ref"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Reference"
+            android:textSize="10sp"
+            android:background="@drawable/table_border"
+            />
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/amount"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Amount"
+            android:textSize="10sp"
+            android:background="@drawable/table_border"
+            />
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/purpose"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Purpose"
+            android:textSize="10sp"
+            android:background="@drawable/table_border"
+            />
+
+
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/approve"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:backgroundTint="#4CAF50"
+            android:text="Approve"
+            android:textSize="10sp"
+            android:background="@drawable/table_border"
+            />
+    </LinearLayout>
+
+
+
+</LinearLayout>

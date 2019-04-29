@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#4CAF50"
+    android:focusableInTouchMode="true"
     android:orientation="vertical"
     tools:context=".Home"
-    android:focusableInTouchMode="true"
+
     >
 
     <ImageView
@@ -19,10 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,16 +30,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59">
+        app:layout_constraintVertical_bias="0.59"
+        android:layout_gravity="center"
+        >
 
 
         <TextView
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="15dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/regular"
             android:gravity="center"
             android:text="শহীদ মসিয়ূর রহমান হল"
@@ -102,58 +101,7 @@
 
 
         <Button
-        android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="15dp"
-        android:layout_weight="1"
-        android:background="@drawable/round_white"
-        android:fontFamily="@font/medium"
-        android:text="Search"
-        android:textAllCaps="false"
-        android:textColor="#000"
-        android:textColorHint="#fff"
-        android:textSize="16sp" />
-
-
-        <Button
-            android:visibility="gone"
-            android:id="@+id/addStudent"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="15dp"
-            android:layout_weight="1"
-            android:background="@drawable/round_white"
-            android:backgroundTint="#F44336"
-            android:fontFamily="@font/medium"
-            android:text="Add Student"
-            android:textAllCaps="false"
-            android:textColor="#000"
-            android:textSize="16sp" />
-
-        <Button
-            android:visibility="gone"
-            android:id="@+id/addTransaction"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="15dp"
-            android:layout_weight="1"
-            android:background="@drawable/round_white"
-            android:backgroundTint="#FF9800"
-            android:fontFamily="@font/medium"
-            android:text="Add Transaction"
-            android:textAllCaps="false"
-            android:textColor="#000"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/profile"
+            android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="15dp"
@@ -162,31 +110,12 @@
             android:layout_weight="1"
             android:background="@drawable/round_white"
             android:fontFamily="@font/medium"
-            android:text="Profile"
+            android:text="Search"
             android:textAllCaps="false"
             android:textColor="#000"
             android:textColorHint="#fff"
             android:textSize="16sp" />
 
+
     </LinearLayout>
-    </ScrollView>
-
-    <Button
-        android:id="@+id/signUp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom"
-        android:layout_weight="1"
-        android:background="#18682f"
-        android:fontFamily="@font/regular"
-        android:gravity="center"
-        android:text="Don't have a account?"
-        android:textAllCaps="false"
-        android:textColor="#ffff"
-        android:textSize="15sp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
 </LinearLayout>

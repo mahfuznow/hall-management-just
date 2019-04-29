@@ -12,12 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Profile"></activity>
+        <activity android:name=".pendingTransaction"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            ></activity>
+        <activity android:name=".HomeNew" />
+        <activity android:name=".Profile" />
         <activity android:name=".addTransaction" />
         <activity
-            android:screenOrientation="landscape"
+            android:name=".transaction"
             android:configChanges="orientation|keyboardHidden"
-            android:name=".transaction" />
+            android:screenOrientation="landscape" />
         <activity android:name=".add" />
         <activity android:name=".Roll" />
         <activity android:name=".Room" />
