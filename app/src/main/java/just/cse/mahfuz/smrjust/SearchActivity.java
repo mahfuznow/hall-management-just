@@ -47,7 +47,7 @@ public class SearchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_search);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         radioGroup = findViewById(R.id.radioGroup);
@@ -67,10 +67,10 @@ public class SearchActivity extends AppCompatActivity {
 
 
                 if (checkedId == R.id.room) {
-                    number.setHint("Enter RoomActivity number");
+                    number.setHint("Enter Room number");
                     checkeditem = "myroom";
                 } else {
-                    number.setHint("Enter RollActivity number");
+                    number.setHint("Enter Roll number");
                     checkeditem = "roll";
                 }
             }
