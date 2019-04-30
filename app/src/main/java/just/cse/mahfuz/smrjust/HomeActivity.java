@@ -81,6 +81,9 @@ public class HomeActivity extends AppCompatActivity {
                     pendingStudent.setVisibility(View.VISIBLE);
                     pendingTransaction.setVisibility(View.VISIBLE);
 
+                    pendingStudent.setVisibility(View.VISIBLE);
+                    pendingTransaction.setVisibility(View.VISIBLE);
+
                     progressDialog.dismiss();
                 }
                 else if ("general".equals(mycategory)) {
@@ -124,7 +127,7 @@ public class HomeActivity extends AppCompatActivity {
         pendingStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(HomeActivity.this,PendingTransactionActivity.class));
+                startActivity(new Intent(HomeActivity.this,PendingAddStudentActivity.class));
             }
         });
         pendingTransaction.setOnClickListener(new View.OnClickListener() {

@@ -12,10 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PendingTransactionActivity"
+        <activity android:name=".PendingAddStudentActivity"></activity>
+        <activity
+            android:name=".PendingTransactionActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="landscape"
-            ></activity>
+            android:screenOrientation="landscape" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".AddTransactionActivity" />

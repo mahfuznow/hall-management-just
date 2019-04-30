@@ -229,8 +229,10 @@ public class AddStudentActivity extends AppCompatActivity {
                                     setData.put("address",myaddress);
                                     setData.put("emergency",myenrollment);
 
+                                    setData.put("time",String.valueOf(System.currentTimeMillis()));
 
-                                    firebaseFirestore.collection("students").document(myroll).set(setData);
+
+                                    firebaseFirestore.collection("pendingAddStudents").document(myroll).set(setData);
 
                                     finish();
                                 }

@@ -341,6 +341,20 @@
                 android:layout_gravity="center"
                 />
 
+            <Button
+                android:visibility="gone"
+                android:id="@+id/approve"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approve"
+                android:textAllCaps="false"
+                android:background="@drawable/round_white"
+                android:backgroundTint="#FF5722"
+                android:layout_gravity="center"
+                />
+
 
 
             <Button

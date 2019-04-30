@@ -11,22 +11,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:weightSum="6"
+        android:gravity="center_horizontal"
+        android:weightSum="7"
         >
+
         <TextView
-            android:padding="5dp"
-            android:id="@+id/time"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Date"
-            android:textSize="10sp"
-            android:background="@drawable/table_border"
-            />
-        <TextView
-            android:visibility="gone"
             android:padding="5dp"
             android:id="@+id/roll"
             android:layout_width="0dp"
@@ -38,55 +27,63 @@
             android:background="@drawable/table_border"
             />
         <TextView
+
             android:padding="5dp"
-            android:id="@+id/ref"
+            android:id="@+id/dept"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Reference"
+            android:text="Department"
+            android:textSize="8sp"
+            android:background="@drawable/table_border"
+            />
+
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/session"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Session"
             android:textSize="10sp"
             android:background="@drawable/table_border"
             />
         <TextView
             android:padding="5dp"
-            android:id="@+id/amount"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Amount"
-            android:textSize="10sp"
-            android:background="@drawable/table_border"
-            />
-        <TextView
-            android:padding="5dp"
-            android:id="@+id/purpose"
+            android:id="@+id/name"
             android:layout_width="0dp"
             android:layout_weight="2"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Purpose"
+            android:text="Name"
             android:textSize="10sp"
             android:background="@drawable/table_border"
             />
-
-
         <TextView
+            android:id="@+id/details"
             android:padding="5dp"
-            android:id="@+id/approve"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textColor="#fff"
-
-            android:text="Approve"
+            android:text="Details"
+            android:textSize="10sp"
+            android:background="@drawable/table_border_colored3"
+            />
+        <TextView
+            android:id="@+id/approve"
+            android:padding="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Approval"
             android:textSize="10sp"
             android:background="@drawable/table_border_colored2"
             />
     </LinearLayout>
-
 
 
 </LinearLayout>
