@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,7 +32,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class add extends AppCompatActivity {
+public class AddStudentActivity extends AppCompatActivity {
 
     ImageView img;
     EditText name,dept,roll,session,reg,dob,bg,gender,phone,email,hName,hStatus,room,enrollment,fName,mName,address,emergency;
@@ -48,6 +49,8 @@ public class add extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         img=findViewById(R.id.img);
 
@@ -75,7 +78,7 @@ public class add extends AppCompatActivity {
 
         add=findViewById(R.id.add);
 
-        FirebaseApp.initializeApp(add.this);
+        FirebaseApp.initializeApp(AddStudentActivity.this);
         storageReference = FirebaseStorage.getInstance().getReference();
         firebaseFirestore=FirebaseFirestore.getInstance();
         firebaseAuth=FirebaseAuth.getInstance();
@@ -137,7 +140,7 @@ public class add extends AppCompatActivity {
 
 
                 ) {
-                    Toast.makeText(add.this,"Please fill up all the required field",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddStudentActivity.this,"Please fill up all the required field",Toast.LENGTH_SHORT).show();
                 }
                 else {
                     uploadFile();

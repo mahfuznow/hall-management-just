@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#4CAF50"
     android:orientation="vertical"
-    tools:context=".HomeNew"
+    tools:context=".HomeActivity"
     android:focusableInTouchMode="true"
     >
 

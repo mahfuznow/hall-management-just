@@ -20,9 +20,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class pendingTransactionRecyclerAdapter extends RecyclerView.Adapter<pendingTransactionRecyclerAdapter.myViewHolder> {
+public class PendingTransactionRecyclerAdapter extends RecyclerView.Adapter<PendingTransactionRecyclerAdapter.myViewHolder> {
     Context context;
-    List<pendingTransactionModel> pendingTransactionModels;
+    List<PendingTransactionModel> pendingTransactionModels;
     String mydate,mytime,myroll,myref,mypurpose,myamount,myhall;
     String myshortname,mycategory;
 
@@ -31,7 +31,7 @@ public class pendingTransactionRecyclerAdapter extends RecyclerView.Adapter<pend
     String uid;
     ProgressDialog progressDialog;
 
-    public pendingTransactionRecyclerAdapter(Context c, List<pendingTransactionModel> tm) {
+    public PendingTransactionRecyclerAdapter(Context c, List<PendingTransactionModel> tm) {
         context=c;
         pendingTransactionModels=tm;
 
@@ -44,14 +44,14 @@ public class pendingTransactionRecyclerAdapter extends RecyclerView.Adapter<pend
 
     @NonNull
     @Override
-    public pendingTransactionRecyclerAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public PendingTransactionRecyclerAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
         View view = inflater.inflate(R.layout.pending_transaction_row, viewGroup, false);
         return new myViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull pendingTransactionRecyclerAdapter.myViewHolder myViewHolder, int i) {
+    public void onBindViewHolder(@NonNull PendingTransactionRecyclerAdapter.myViewHolder myViewHolder, int i) {
 
 
         mytime=pendingTransactionModels.get(i).getTime();

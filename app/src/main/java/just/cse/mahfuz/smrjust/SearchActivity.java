@@ -25,7 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class Home extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
     RadioGroup radioGroup;
     EditText number;
@@ -58,7 +58,7 @@ public class Home extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         uid = auth.getUid();
 
-        progressDialog = new ProgressDialog(Home.this);
+        progressDialog = new ProgressDialog(SearchActivity.this);
 
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -67,10 +67,10 @@ public class Home extends AppCompatActivity {
 
 
                 if (checkedId == R.id.room) {
-                    number.setHint("Enter Room number");
+                    number.setHint("Enter RoomActivity number");
                     checkeditem = "myroom";
                 } else {
-                    number.setHint("Enter Roll number");
+                    number.setHint("Enter RollActivity number");
                     checkeditem = "roll";
                 }
             }
@@ -85,7 +85,7 @@ public class Home extends AppCompatActivity {
 
 
                     if ("myroom".equals(checkeditem)) {
-                        Intent intent = new Intent(Home.this, Room.class);
+                        Intent intent = new Intent(SearchActivity.this, RoomActivity.class);
                         intent.putExtra("room", mynumber);
                         startActivity(intent);
                     } else {
@@ -127,9 +127,9 @@ public class Home extends AppCompatActivity {
 
                                 if (myroll != null) {
 
-                                    final AlertDialog.Builder builder = new AlertDialog.Builder(Home.this);
+                                    final AlertDialog.Builder builder = new AlertDialog.Builder(SearchActivity.this);
 
-                                    View view1 = LayoutInflater.from(Home.this).inflate(R.layout.custom_layout, null);
+                                    View view1 = LayoutInflater.from(SearchActivity.this).inflate(R.layout.custom_layout, null);
                                     builder.setView(view1);
                                     builder.setCancelable(true);
                                     final AlertDialog alertDialog = builder.create();
@@ -163,7 +163,7 @@ public class Home extends AppCompatActivity {
                                     Button close = view1.findViewById(R.id.close);
 
 
-                                    Glide.with(Home.this)
+                                    Glide.with(SearchActivity.this)
                                             .load(myurl)
                                             .thumbnail(0.1f)
                                             .into(img);
@@ -173,7 +173,7 @@ public class Home extends AppCompatActivity {
 
                                     name.setText("Name : " + myname);
                                     dept.setText("Department : " + mydept);
-                                    roll.setText("Roll : " + myroll);
+                                    roll.setText("RollActivity : " + myroll);
                                     session.setText("Session :" + mysession);
                                     reg.setText("Registration No :" + myreg);
 
@@ -184,7 +184,7 @@ public class Home extends AppCompatActivity {
                                     email.setText("Email :" + myemail);
                                     hName.setText("Hall Name :" + myhName);
                                     hStatus.setText("Hall Status :" + myhStatus);
-                                    room.setText("Room No :" + myroom);
+                                    room.setText("RoomActivity No :" + myroom);
                                     enrollment.setText("Enrollment Date :" + myenrollment);
 
                                     fName.setText("Father's Name :" + myfName);
@@ -202,7 +202,7 @@ public class Home extends AppCompatActivity {
                                     viewTransaction.setOnClickListener(new View.OnClickListener() {
                                         @Override
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(Home.this, transaction.class);
+                                            Intent intent = new Intent(SearchActivity.this, ViewTransactionActivity.class);
                                             intent.putExtra("roll", myroll);
                                             startActivity(intent);
                                         }
@@ -211,7 +211,7 @@ public class Home extends AppCompatActivity {
                                     alertDialog.show();
                                 } else {
                                     progressDialog.dismiss();
-                                    Toast.makeText(Home.this, "Couldn't find!!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(SearchActivity.this, "Couldn't find!!", Toast.LENGTH_SHORT).show();
                                 }
 
                             }
@@ -225,7 +225,7 @@ public class Home extends AppCompatActivity {
 
                     }
                 } else {
-                    Toast.makeText(Home.this, "Please Fill the required field", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SearchActivity.this, "Please Fill the required field", Toast.LENGTH_SHORT).show();
                 }
             }
         });

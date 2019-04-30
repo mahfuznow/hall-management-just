@@ -1,21 +1,20 @@
 package just.cse.mahfuz.smrjust;
 
-public class transactionModel {
-    String date,time,roll,ref,purpose,amount,authorized;
+public class PendingTransactionModel {
+    String date,time,roll,ref,purpose,amount,hall;
 
-    public transactionModel() {
+    public PendingTransactionModel() {
     }
 
-    public transactionModel(String date, String time, String roll, String ref, String purpose, String amount, String authorized) {
+    public PendingTransactionModel(String date, String time, String roll, String ref, String purpose, String amount, String hall) {
         this.date = date;
         this.time = time;
         this.roll = roll;
         this.ref = ref;
         this.purpose = purpose;
         this.amount = amount;
-        this.authorized = authorized;
+        this.hall = hall;
     }
-
     public String getDate() {
         return date;
     }
@@ -64,11 +63,12 @@ public class transactionModel {
         this.amount = amount;
     }
 
-    public String getAuthorized() {
-        return authorized;
+    public String getHall() {
+        return hall;
     }
 
-    public void setAuthorized(String authorized) {
-        this.authorized = authorized;
+    public void setHall(String hall) {
+        this.hall = hall;
     }
+
 }

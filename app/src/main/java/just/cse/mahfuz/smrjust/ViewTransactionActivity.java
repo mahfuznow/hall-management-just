@@ -5,29 +5,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.view.WindowManager;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
-
-public class transaction extends AppCompatActivity {
+public class ViewTransactionActivity extends AppCompatActivity {
 
 
     RecyclerView recyclerView;
     FirebaseFirestore firebaseFirestore;
-    transactionRecyclerAdapter mtransactionRecyclerAdapter;
+    TransactionRecyclerAdapter mtransactionRecyclerAdapter;
 
     String myroll;
 
@@ -40,6 +34,8 @@ public class transaction extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         title=findViewById(R.id.title);
         totalAmount=findViewById(R.id.total);
@@ -47,7 +43,7 @@ public class transaction extends AppCompatActivity {
 
         firebaseFirestore = FirebaseFirestore.getInstance();
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(transaction.this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(ViewTransactionActivity.this));
 
 
 
@@ -67,10 +63,10 @@ public class transaction extends AppCompatActivity {
                 }
 
 
-                List<transactionModel> transactionModels = queryDocumentSnapshots.toObjects(transactionModel.class);
+                List<TransactionModel> transactionModels = queryDocumentSnapshots.toObjects(TransactionModel.class);
 
 
-                mtransactionRecyclerAdapter = new transactionRecyclerAdapter(transaction.this, transactionModels);
+                mtransactionRecyclerAdapter = new TransactionRecyclerAdapter(ViewTransactionActivity.this, transactionModels);
                 recyclerView.setAdapter(mtransactionRecyclerAdapter);
 
 
@@ -91,9 +87,9 @@ public class transaction extends AppCompatActivity {
         query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                List<transactionModel> transactionModels = task.getResult().toObjects(transactionModel.class);
+                List<TransactionModel> transactionModels = task.getResult().toObjects(TransactionModel.class);
 
-                mtransactionRecyclerAdapter = new transactionRecyclerAdapter(transaction.this, transactionModels);
+                mtransactionRecyclerAdapter = new TransactionRecyclerAdapter(ViewTransactionActivity.this, transactionModels);
                 recyclerView.setAdapter(mtransactionRecyclerAdapter);
 
 

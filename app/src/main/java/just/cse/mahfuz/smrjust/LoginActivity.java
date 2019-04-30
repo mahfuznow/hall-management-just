@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     Button login;
     EditText email,pass;
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser currentUser = mauth.getCurrentUser();
         if (currentUser!=null){
-            Intent intent = new Intent(MainActivity.this, HomeNew.class);
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
             startActivity(intent);
         }
     }
@@ -52,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
         email =findViewById(R.id.email);
         pass=findViewById(R.id.pass);
 
-        dialog = new ProgressDialog(MainActivity.this);
+        dialog = new ProgressDialog(LoginActivity.this);
 
-        FirebaseApp.initializeApp(MainActivity.this);
+        FirebaseApp.initializeApp(LoginActivity.this);
         mauth=FirebaseAuth.getInstance();
 
 
@@ -77,21 +77,21 @@ public class MainActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 dialog.dismiss();
-                                Intent intent = new Intent(MainActivity.this, HomeNew.class);
+                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                 startActivity(intent);
 
                             } else if (!isNetworkAvailable()) {
-                                Toast.makeText(MainActivity.this, "Please check your internet connection and try again", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Please check your internet connection and try again", Toast.LENGTH_SHORT).show();
                                 dialog.dismiss();
                             } else {
-                                Toast.makeText(MainActivity.this, "LogIn failed. Please input correct Email & password", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "LogIn failed. Please input correct Email & password", Toast.LENGTH_SHORT).show();
                                 dialog.dismiss();
                             }
                         }
                     });
                 }
                 else {
-                    Toast.makeText(MainActivity.this, "Please input both Email & password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Please input both Email & password", Toast.LENGTH_SHORT).show();
                     dialog.dismiss();
                 }
 
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
-                = (ConnectivityManager) getSystemService(Home.CONNECTIVITY_SERVICE);
+                = (ConnectivityManager) getSystemService(SearchActivity.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }

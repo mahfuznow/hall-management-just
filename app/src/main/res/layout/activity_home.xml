@@ -7,7 +7,7 @@
     android:background="#4CAF50"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
-    tools:context=".Home"
+    tools:context=".SearchActivity"
 
     >
 

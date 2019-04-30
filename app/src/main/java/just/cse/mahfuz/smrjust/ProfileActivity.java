@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class Profile extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
     FirebaseFirestore firebaseFirestore;
 
@@ -36,6 +37,8 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         img=findViewById(R.id.Img);
         name=findViewById(R.id.name);
@@ -52,7 +55,7 @@ public class Profile extends AppCompatActivity {
         auth=FirebaseAuth.getInstance();
         uid=auth.getUid();
 
-        progressDialog= new ProgressDialog(Profile.this);
+        progressDialog= new ProgressDialog(ProfileActivity.this);
 
         progressDialog.setMessage("Please wait...");
         progressDialog.show();
@@ -72,7 +75,7 @@ public class Profile extends AppCompatActivity {
 
 
 
-                Glide.with(Profile.this)
+                Glide.with(ProfileActivity.this)
                         .load(myimg)
                         .thumbnail(0.1f)
                         .into(img);
@@ -96,7 +99,7 @@ public class Profile extends AppCompatActivity {
                 progressDialog.show();
                 auth.signOut();
                 finish();
-                Intent intent = new Intent(Profile.this, MainActivity.class);
+                Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

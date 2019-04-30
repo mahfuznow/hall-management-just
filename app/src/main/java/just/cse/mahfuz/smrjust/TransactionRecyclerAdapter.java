@@ -3,36 +3,33 @@ package just.cse.mahfuz.smrjust;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.text.format.DateFormat;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.TextView;
 
 import java.util.List;
 
-public class transactionRecyclerAdapter extends RecyclerView.Adapter<transactionRecyclerAdapter.myViewHolder> {
+public class TransactionRecyclerAdapter extends RecyclerView.Adapter<TransactionRecyclerAdapter.myViewHolder> {
     Context context;
-    List<transactionModel> transactionModels;
+    List<TransactionModel> transactionModels;
     String mydate,mytime,myroll,myref,mypurpose,myamount,myauthorized;
 
-    public transactionRecyclerAdapter(Context c, List<transactionModel> tm) {
+    public TransactionRecyclerAdapter(Context c, List<TransactionModel> tm) {
         context=c;
         transactionModels=tm;
     }
 
     @NonNull
     @Override
-    public transactionRecyclerAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public TransactionRecyclerAdapter.myViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
         View view = inflater.inflate(R.layout.transaction_row, viewGroup, false);
         return new myViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull transactionRecyclerAdapter.myViewHolder myViewHolder, int i) {
+    public void onBindViewHolder(@NonNull TransactionRecyclerAdapter.myViewHolder myViewHolder, int i) {
 
         mydate=transactionModels.get(i).getDate();
         myroll = transactionModels.get(i).getRoll();

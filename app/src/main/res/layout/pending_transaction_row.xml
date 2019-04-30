@@ -80,10 +80,10 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textColor="#fff"
-            android:backgroundTint="#4CAF50"
+
             android:text="Approve"
             android:textSize="10sp"
-            android:background="@drawable/table_border"
+            android:background="@drawable/table_border_colored2"
             />
     </LinearLayout>
 

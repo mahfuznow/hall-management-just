@@ -7,7 +7,7 @@
     android:background="#4CAF50"
     android:orientation="vertical"
     android:weightSum="11"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
 
     <LinearLayout

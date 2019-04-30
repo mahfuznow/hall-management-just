@@ -1,31 +1,21 @@
 package just.cse.mahfuz.smrjust;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class HomeNew extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     Button search,profile;
     Button addStudent,addTransaction;
@@ -66,7 +56,7 @@ public class HomeNew extends AppCompatActivity {
 
 
 
-        progressDialog= new ProgressDialog(HomeNew.this);
+        progressDialog= new ProgressDialog(HomeActivity.this);
 
         progressDialog.setMessage("Please wait...");
         progressDialog.show();
@@ -114,40 +104,40 @@ public class HomeNew extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeNew.this,Home.class));
+                startActivity(new Intent(HomeActivity.this, SearchActivity.class));
             }
         });
 
         addStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeNew.this,add.class));
+                startActivity(new Intent(HomeActivity.this, AddStudentActivity.class));
             }
         });
 
         addTransaction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeNew.this,addTransaction.class));
+                startActivity(new Intent(HomeActivity.this, AddTransactionActivity.class));
             }
         });
         pendingStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //startActivity(new Intent(HomeNew.this,pendingTransaction.class));
+                //startActivity(new Intent(HomeActivity.this,PendingTransactionActivity.class));
             }
         });
         pendingTransaction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeNew.this,pendingTransaction.class));
+                startActivity(new Intent(HomeActivity.this, PendingTransactionActivity.class));
             }
         });
 
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeNew.this,Profile.class));
+                startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
             }
         });
     }

@@ -1,7 +1,6 @@
 package just.cse.mahfuz.smrjust;
 
 import android.app.AlertDialog;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +12,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class Room extends AppCompatActivity {
+public class RoomActivity extends AppCompatActivity {
 
     String myroom;
     TextView room;
@@ -40,7 +39,7 @@ public class Room extends AppCompatActivity {
 
         myroom =getIntent().getExtras().getString("room");
 
-        room.setText("Room No: "+myroom);
+        room.setText("RoomActivity No: "+myroom);
 
 
 
@@ -48,9 +47,9 @@ public class Room extends AppCompatActivity {
         p1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(Room.this);
+                final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(RoomActivity.this);
 
-                View view1 = LayoutInflater.from(Room.this).inflate(R.layout.custom_layout, null);
+                View view1 = LayoutInflater.from(RoomActivity.this).inflate(R.layout.custom_layout, null);
                 builder.setView(view1);
                 builder.setCancelable(true);
                 final AlertDialog alertDialog = builder.create();
@@ -66,14 +65,14 @@ public class Room extends AppCompatActivity {
 
                 Button close =view1.findViewById(R.id.close);
 
-                Glide.with(Room.this)
+                Glide.with(RoomActivity.this)
                         .load(img1)
                         .thumbnail(0.1f)
                         .into(img);
 
                 //img.setImageResource(R.drawable.passport);
                 name.setText("Name : "+"Mahfuzur Rahman");
-                roll.setText("Roll : "+"160121");
+                roll.setText("RollActivity : "+"160121");
                 reg.setText("Registration No : 1601016");
                 dept.setText("Department : Computer Science & Engineering");
                 phone.setText("Phone : 01773991774");
@@ -99,9 +98,9 @@ public class Room extends AppCompatActivity {
         p2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(Room.this);
+                final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(RoomActivity.this);
 
-                View view1 = LayoutInflater.from(Room.this).inflate(R.layout.custom_layout, null);
+                View view1 = LayoutInflater.from(RoomActivity.this).inflate(R.layout.custom_layout, null);
                 builder.setView(view1);
                 builder.setCancelable(true);
                 final AlertDialog alertDialog = builder.create();
@@ -120,7 +119,7 @@ public class Room extends AppCompatActivity {
 
                 //img.setImageResource(R.drawable.passport);
                 name.setText("Name : "+"Ashav Noman");
-                roll.setText("Roll : "+"160136");
+                roll.setText("RollActivity : "+"160136");
                 reg.setText("Registration No : 1601036");
                 dept.setText("Department : Computer Science & Engineering");
                 phone.setText("Phone : 01815212155");
@@ -142,9 +141,9 @@ public class Room extends AppCompatActivity {
         p3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(Room.this);
+                final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(RoomActivity.this);
 
-                View view1 = LayoutInflater.from(Room.this).inflate(R.layout.custom_layout, null);
+                View view1 = LayoutInflater.from(RoomActivity.this).inflate(R.layout.custom_layout, null);
                 builder.setView(view1);
                 builder.setCancelable(true);
                 final AlertDialog alertDialog = builder.create();
@@ -163,7 +162,7 @@ public class Room extends AppCompatActivity {
 
                 //img.setImageResource(R.drawable.passport);
                 name.setText("Name : "+"Rabiul Islam");
-                roll.setText("Roll : "+"160124");
+                roll.setText("RollActivity : "+"160124");
                 reg.setText("Registration No : 1601024");
                 dept.setText("Department : Computer Science & Engineering");
                 phone.setText("Phone : 01945151116");
@@ -187,9 +186,9 @@ public class Room extends AppCompatActivity {
         p4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(Room.this);
+                final android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(RoomActivity.this);
 
-                View view1 = LayoutInflater.from(Room.this).inflate(R.layout.custom_layout, null);
+                View view1 = LayoutInflater.from(RoomActivity.this).inflate(R.layout.custom_layout, null);
                 builder.setView(view1);
                 builder.setCancelable(true);
                 final AlertDialog alertDialog = builder.create();
@@ -208,7 +207,7 @@ public class Room extends AppCompatActivity {
 
                 //img.setImageResource(R.drawable.passport);
                 name.setText("Name : "+"Anik Dey Joy");
-                roll.setText("Roll : "+"160148");
+                roll.setText("RollActivity : "+"160148");
                 reg.setText("Registration No : 1601048");
                 dept.setText("Department : Computer Science & Engineering");
                 phone.setText("Phone : 01645646465");

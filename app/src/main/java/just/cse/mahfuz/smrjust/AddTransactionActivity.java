@@ -5,29 +5,25 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class addTransaction extends AppCompatActivity {
+public class AddTransactionActivity extends AppCompatActivity {
 
     EditText date,roll,ref,purpose,amount;
     String mytime,myroll,myref,mypurpose,myamount;
     Button add;
-    CheckBox admit,idcard,seat,meal,fine;
+    CheckBox admit,idcard,seat,meal,sports,transport,medical,fine;
     FirebaseFirestore firebaseFirestore;
     Spinner hall;
     String myhall;
@@ -36,6 +32,8 @@ public class addTransaction extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_transaction);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
 
         date=findViewById(R.id.date);
@@ -48,6 +46,9 @@ public class addTransaction extends AppCompatActivity {
         idcard=findViewById(R.id.id_card);
         seat=findViewById(R.id.seat);
         meal=findViewById(R.id.meal);
+        sports=findViewById(R.id.sports);
+        transport=findViewById(R.id.transport);
+        medical=findViewById(R.id.medical);
         fine=findViewById(R.id.fine);
 
         hall=findViewById(R.id.hall);
@@ -90,16 +91,28 @@ public class addTransaction extends AppCompatActivity {
 
                 mypurpose=" ";
                 if(admit.isChecked()){
-                    mypurpose += " Admit ";
+                    mypurpose += " [Admit] ";
                 }
                 if(idcard.isChecked()){
-                    mypurpose += " IDcard ";
+                    mypurpose += " [IDcard] ";
                 }
                 if(seat.isChecked()){
-                    mypurpose += " Seat ";
+                    mypurpose += " [Seat] ";
+                }
+                if(meal.isChecked()){
+                    mypurpose += " [Meal] ";
+                }
+                if(sports.isChecked()){
+                    mypurpose += " [Sports] ";
+                }
+                if(transport.isChecked()){
+                    mypurpose += " [Transport] ";
+                }
+                if(medical.isChecked()){
+                    mypurpose += " [Medical] ";
                 }
                 if(fine.isChecked()){
-                    mypurpose += " Fine ";
+                    mypurpose += " [Fine] ";
                 }
 
                 if (!TextUtils.isEmpty(myroll) && !TextUtils.isEmpty(myref) && !TextUtils.isEmpty(mypurpose) && !TextUtils.isEmpty(myamount) && !TextUtils.isEmpty(myamount) && !"null".equals(myhall)) {
@@ -116,11 +129,11 @@ public class addTransaction extends AppCompatActivity {
                    // setData.put("authorized",myauthorized);
 
                     firebaseFirestore.collection("pendingTransactions").document().set(setData);
-                    Toast.makeText(addTransaction.this,"Transaction added successfully into Pending",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddTransactionActivity.this,"Transaction added successfully into Pending",Toast.LENGTH_SHORT).show();
                     finish();
                 }
                 else {
-                    Toast.makeText(addTransaction.this,"Please fill up all the required field",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddTransactionActivity.this,"Please fill up all the required field",Toast.LENGTH_SHORT).show();
                 }
             }
         });

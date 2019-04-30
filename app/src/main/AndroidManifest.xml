@@ -12,22 +12,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".pendingTransaction"
+        <activity android:name=".PendingTransactionActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="landscape"
             ></activity>
-        <activity android:name=".HomeNew" />
-        <activity android:name=".Profile" />
-        <activity android:name=".addTransaction" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".AddTransactionActivity" />
         <activity
-            android:name=".transaction"
+            android:name=".ViewTransactionActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="landscape" />
-        <activity android:name=".add" />
-        <activity android:name=".Roll" />
-        <activity android:name=".Room" />
-        <activity android:name=".Home" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".AddStudentActivity" />
+        <activity android:name=".RollActivity" />
+        <activity android:name=".RoomActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
