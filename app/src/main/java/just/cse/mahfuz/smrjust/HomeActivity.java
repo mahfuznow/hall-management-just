@@ -81,8 +81,8 @@ public class HomeActivity extends AppCompatActivity {
                     pendingStudent.setVisibility(View.VISIBLE);
                     pendingTransaction.setVisibility(View.VISIBLE);
 
-                    pendingStudent.setVisibility(View.VISIBLE);
-                    pendingTransaction.setVisibility(View.VISIBLE);
+                    addStudent.setVisibility(View.VISIBLE);
+                    addTransaction.setVisibility(View.VISIBLE);
 
                     progressDialog.dismiss();
                 }
