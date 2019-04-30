@@ -154,7 +154,7 @@
                     android:text="Pending Transaction"
                     android:textAllCaps="false"
                     android:textColor="#000"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
 

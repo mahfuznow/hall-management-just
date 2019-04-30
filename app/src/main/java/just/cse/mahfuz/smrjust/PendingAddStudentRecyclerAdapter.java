@@ -174,6 +174,7 @@ public class PendingAddStudentRecyclerAdapter extends RecyclerView.Adapter<Pendi
                     @Override
                     public void onClick(View v) {
                         approve();
+                        alertDialog.dismiss();
                     }
                 });
 

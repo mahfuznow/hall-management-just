@@ -13,13 +13,13 @@
         android:layout_gravity="center"
         android:orientation="vertical">
 
-        <EditText
+        <TextView
             android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/semi_round"
-            android:hint="Date"
+            android:text="Date"
             android:inputType="number"
             android:padding="15dp" />
 

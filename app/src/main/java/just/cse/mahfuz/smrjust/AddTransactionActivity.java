@@ -1,5 +1,6 @@
 package just.cse.mahfuz.smrjust;
 
+import android.app.DatePickerDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,24 +10,37 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
 public class AddTransactionActivity extends AppCompatActivity {
 
-    EditText date,roll,ref,purpose,amount;
+    TextView date;
+    EditText roll,ref,purpose,amount;
     String mytime,myroll,myref,mypurpose,myamount;
     Button add;
     CheckBox admit,idcard,seat,meal,sports,transport,medical,fine;
     FirebaseFirestore firebaseFirestore;
     Spinner hall;
     String myhall;
+
+
+    Calendar calendar;
+    DatePickerDialog datePickerDialog;
+    int year, month, dayOfMonth;
+    int dayint;
+    String dayArray[] = {"saturday", "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"};
+    public String dayOfWeek;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +75,31 @@ public class AddTransactionActivity extends AppCompatActivity {
         date.setText(mytime);
 
 
+        date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calendar = Calendar.getInstance();
+                year = calendar.get(Calendar.YEAR);
+                month = calendar.get(Calendar.MONTH);
+                dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
+                datePickerDialog = new DatePickerDialog(AddTransactionActivity.this,
+                        new DatePickerDialog.OnDateSetListener() {
+                            @Override
+                            public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+
+                                calendar.set(year, month, day);
+                                dayint = calendar.get(Calendar.DAY_OF_WEEK);
+                                dayOfWeek = dayArray[dayint];
+                                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy");
+                                mytime= (simpleDateFormat.format(calendar.getTime()));
+                                date.setText(mytime);
+
+                            }
+                        }, year, month, dayOfMonth);
+                //datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis());
+                datePickerDialog.show();
+            }
+        });
 
         hall.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

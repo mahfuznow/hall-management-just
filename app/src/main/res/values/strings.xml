@@ -8,4 +8,103 @@
         <item>MM</item>
         <item>TB</item>
     </string-array>
+
+
+    <string-array name="unit">
+        <item>--Unit--</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+
+    </string-array>
+
+    <string-array name="department">
+        <item>--Department--</item>
+    </string-array>
+    <string-array name="name">
+        <item>--Name--</item>
+    </string-array>
+
+    <string-array name="unitA">
+        <item>--Department--</item>
+        <item>CSE</item>
+        <item>EEE</item>
+        <item>IPE</item>
+        <item>CE</item>
+        <item>BME</item>
+        <item>PME</item>
+        <item>TE</item>
+    </string-array>
+
+    <string-array name="TeacherCSE">
+        <item>--Name--</item>
+        <item>SMG</item>
+        <item>SH</item>
+        <item>MAH</item>
+        <item>MAR</item>
+        <item>NH</item>
+        <item>MAAN</item>
+        <item>NAS</item>
+        <item>MYA</item>
+        <item>MSH</item>
+        <item>JF</item>
+        <item>AKD</item>
+        <item>JAF</item>
+
+    </string-array>
+
+    <string-array name="unitB">
+        <item>--Department--</item>
+        <item>MB</item>
+        <item>FMB</item>
+        <item>GEBT</item>
+        <item>B.PHARM</item>
+        <item>BME</item>
+    </string-array>
+
+    <string-array name="unitC">
+        <item>--Department--</item>
+        <item>EST</item>
+        <item>NFT</item>
+        <item>APPT</item>
+        <item>PHY</item>
+        <item>CHEM</item>
+        <item>MATH</item>
+    </string-array>
+
+    <string-array name="unitD">
+        <item>--Department--</item>
+        <item>ENG</item>
+        <item>BENG</item>
+    </string-array>
+
+    <string-array name="unitE">
+        <item>--Department--</item>
+        <item>PESS</item>
+    </string-array>
+
+    <string-array name="unitF">
+        <item>--Department--</item>
+        <item>AIS</item>
+        <item>MANAGEMENT</item>
+        <item>FINANCE</item>
+    </string-array>
+
+
+    <string-array name="BloodGroup">
+        <item>--Select Blood Group--</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+
 </resources>

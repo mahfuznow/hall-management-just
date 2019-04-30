@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/semi_round"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/user_icon"
+        app:civ_border_color="#00000000"
+        app:civ_border_width="2dp"></de.hdodenhof.circleimageview.CircleImageView>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/regular"
+                android:text="Basic Information"
+                android:textColor="#2196F3"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Name : "
+                android:padding="10dp"
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/dept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Department : "
+                android:padding="10dp"
+                android:textColor="#000"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/departmentlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/identity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#E8D955"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="#ffff">
+
+                    <Spinner
+                        android:id="@+id/unit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/unit"
+                        >
+
+                    </Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="#ffff">
+
+                    <Spinner
+                        android:id="@+id/department"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/department"
+                        >
+
+                    </Spinner>
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/roll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Roll : "
+                android:padding="10dp"
+                android:textColor="#000"
+                android:inputType="number"
+                />
+
+            <EditText
+                android:id="@+id/session"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Session : "
+                android:padding="10dp"
+                android:textColor="#000"
+
+                />
+
+            <EditText
+                android:id="@+id/reg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Resigtration No : "
+                android:padding="10dp"
+                android:textColor="#000"
+                android:inputType="number"
+
+                />
+
+            <TextView
+                android:id="@+id/dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Date Of Birth : "
+                android:padding="10dp"
+                android:textColor="#000" />
+
+            <Spinner
+                android:id="@+id/bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Blood Group : "
+                android:padding="10dp"
+                android:textColor="#000"
+                android:entries="@array/BloodGroup"
+                />
+
+            <RadioGroup
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_white"
+                android:backgroundTint="#50fcfbfb"
+                android:orientation="horizontal"
+                android:paddingRight="10dp"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Male"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+
+                    />
+            </RadioGroup>
+
+            <EditText
+
+
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Phone No : "
+                android:padding="10dp"
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Email : "
+                android:padding="10dp"
+                android:textColor="#000" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/regular"
+                android:text="Hall Information"
+                android:textColor="#2196F3"
+                android:textSize="18sp" />
+
+
+            <Spinner
+                android:id="@+id/hall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/semi_round"
+                android:entries="@array/hall"
+                android:padding="10dp"
+                android:backgroundTint="#E8D955"
+                >
+
+            </Spinner>
+
+            <RadioGroup
+                android:id="@+id/hStatus"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_white"
+                android:backgroundTint="#50fcfbfb"
+                android:orientation="horizontal"
+                android:paddingRight="10dp"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/residential"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Residential"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/nonresidential"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Non-Residential"
+
+                    />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Room No : "
+                android:padding="10dp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/enrollment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Enrollment Date : "
+                android:padding="10dp"
+                android:textColor="#000" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/regular"
+                android:text="Permanent Address"
+                android:textColor="#2196F3"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/fName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Father's Name : "
+                android:padding="10dp"
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/mName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Mother's Name : "
+                android:padding="10dp"
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Address : "
+                android:padding="10dp"
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/emergancy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/semi_round"
+                android:backgroundTint="#E9DA55"
+                android:fontFamily="@font/regular"
+                android:gravity="left"
+                android:hint="Emergency contact : "
+                android:padding="10dp"
+                android:textColor="#000" />
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_white"
+                android:backgroundTint="#FF5722"
+                android:padding="15dp"
+                android:text="Add"
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
